@@ -1,0 +1,10 @@
+@import 'styles/variables';
+
+.container {
+    padding: 0 15px;
+
+    @media ($mq-desktop) {
+        max-width: 1172px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,131 @@
+@import 'styles/variables';
+.footer {
+    padding-bottom: 60px;
+    &__nav {
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+        gap: 30px;
+        .nav {
+            &__block {
+                display: flex;
+                flex-direction: column;
+
+                &_title {
+                    color: #656566;
+                    font-size: $fz-sm;
+                    font-weight: 700;
+                    line-height: $line-height;
+
+                    padding-bottom: 20px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                }
+                &_item {
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: $line-height;
+                    color: $color-text;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .contact {
+            &__phone {
+                font-weight: 500;
+                font-size: 16px;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &__social {
+                padding-top: 8px;
+                display: flex;
+                gap: 0 10px;
+            }
+            &__address {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: $line-height;
+                padding-top: 7px;
+            }
+        }
+        .menu {
+            display: grid;
+            grid-template-areas: 'title title';
+            grid-template-columns: 100px 1fr;
+            gap: 0 48px;
+            > div {
+                display: flex;
+                flex-direction: column;
+            }
+            &__title {
+                grid-area: title;
+            }
+        }
+    }
+
+    &__privacy {
+        padding-top: 20px;
+        font-family: $ff-secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fz-sm;
+        line-height: 15px;
+        a {
+            padding-top: 5px;
+            display: block;
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    @media ($mq-desktop) {
+        padding-bottom: 20px;
+        &__nav {
+            grid-template-columns: 250px 408px 1fr;
+            padding-top: 37px;
+            gap: 0 45px;
+        }
+        .nav {
+            &__block {
+                &_title {
+                    padding-bottom: 20px;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+                &_item {
+                    font-size: 16px;
+                }
+            }
+        }
+        .contact {
+            // align-self: flex-end;
+            // justify-content: end;
+            align-items: flex-end;
+            &__social {
+                padding-top: 21px;
+                gap: 0 5px;
+            }
+            &__address {
+                font-size: 16px;
+                padding-top: 14px;
+            }
+        }
+        .menu {
+            display: grid;
+            grid-template-areas: 'title title';
+            grid-template-columns: 150px 1fr;
+            gap: 0 45px;
+        }
+        .footer__privacy {
+            text-align: end;
+            grid-area: 2/3;
+            padding-top: 32px;
+        }
+    }
+}
