@@ -5,9 +5,9 @@ import phone from 'assets/img/icons/phone.svg';
 import whatsapp from 'assets/img/icons/whatsapp.svg';
 import { Phone } from 'components/UI/Phone';
 import logo from 'assets/img/logo_welbex.png';
+import { SocialIcon } from 'components/UI/SocialIcon';
 
 import styles from './style.module.scss';
-import { SocialIcon } from 'components/UI/SocialIcon';
 
 export const Header = () => {
     return (
