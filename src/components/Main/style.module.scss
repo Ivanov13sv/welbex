@@ -171,7 +171,15 @@
         right: 0;
         background-image: url('../../assets/img/bg/noise.png');
     }
+    @media ($mq-tablet) {
+        text-align: center;
+        .gift__shortList{
+            justify-content: center;
+        }
+
+    }
     @media ($mq-desktop) {
+        text-align: left;
         position: static;
         &__btn {
             font-weight: 500;
@@ -183,6 +191,14 @@
             border: none;
             padding: 21px 35px;
             display: block;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(1.2);
+            }
+            &:active{
+                box-shadow: 1px 1px 5px black inset;
+                filter: brightness(.9);
+            }
         }
         &__content {
             display: grid;

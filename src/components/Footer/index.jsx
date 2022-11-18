@@ -5,6 +5,7 @@ import phone from 'assets/img/icons/phone.svg';
 import whatsapp from 'assets/img/icons/whatsapp.svg';
 import { Phone } from 'components/UI/Phone';
 import styles from './style.module.scss';
+import { SocialIcon } from 'components/UI/SocialIcon';
 
 export const Footer = () => {
     return (
@@ -71,15 +72,17 @@ export const Footer = () => {
 
                         <Phone number={'+7 555 555-55-55'} />
                         <div className={styles.contact__social}>
-                            <a href="/">
-                                <img src={telegram} alt="telegram" />
-                            </a>
-                            <a href="/">
-                                <img src={phone} alt="phone" />
-                            </a>
-                            <a href="/">
-                                <img src={whatsapp} alt="whatsapp" />
-                            </a>
+                            <SocialIcon
+                                alt="telegram"
+                                icon={telegram}
+                                href="/"
+                            />
+                            <SocialIcon alt="phone" icon={phone} href="/" />
+                            <SocialIcon
+                                alt="whatsapp"
+                                icon={whatsapp}
+                                href="/"
+                            />
                         </div>
                         <address className={styles.contact__address}>
                             Москва, Путевой проезд 3с1, к 902

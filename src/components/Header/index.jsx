@@ -7,6 +7,7 @@ import { Phone } from 'components/UI/Phone';
 import logo from 'assets/img/logo_welbex.png';
 
 import styles from './style.module.scss';
+import { SocialIcon } from 'components/UI/SocialIcon';
 
 export const Header = () => {
     return (
@@ -41,15 +42,17 @@ export const Header = () => {
                     <div className={styles.header__contacts}>
                         <Phone number="+7 555 555-55-55" />
                         <div className={styles.header__contacts_social}>
-                            <a href="/">
-                                <img src={telegram} alt="telegram" />
-                            </a>
-                            <a href="/">
-                                <img src={phone} alt="phone" />
-                            </a>
-                            <a href="/">
-                                <img src={whatsapp} alt="whatsapp" />
-                            </a>
+                            <SocialIcon
+                                alt="telegram"
+                                icon={telegram}
+                                href="/"
+                            />
+                            <SocialIcon alt="phone" icon={phone} href="/" />
+                            <SocialIcon
+                                alt="whatsapp"
+                                icon={whatsapp}
+                                href="/"
+                            />
                         </div>
                     </div>
                 </div>

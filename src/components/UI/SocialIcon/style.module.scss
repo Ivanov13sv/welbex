@@ -1,0 +1,32 @@
+@keyframes wiggle {
+    0%,
+    7% {
+        transform: rotateZ(0) scale(1.2);
+    }
+    15% {
+        transform: rotateZ(-15deg) scale(1.2);
+    }
+    20% {
+        transform: rotateZ(10deg) scale(1.2);
+    }
+    25% {
+        transform: rotateZ(-10deg) scale(1.2);
+    }
+    30% {
+        transform: rotateZ(6deg) scale(1.2);
+    }
+    35% {
+        transform: rotateZ(-4deg) scale(1.2);
+    }
+    40%,
+    100% {
+        transform: rotateZ(0) scale(1);
+    }
+}
+.icon {
+    &:hover{
+
+        animation: wiggle 1.5s linear infinite;
+        
+    }
+}
